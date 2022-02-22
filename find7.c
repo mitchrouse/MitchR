@@ -11,7 +11,7 @@ int main(void)
     FILE *fd;
     const char *filename = {"list.txt"};
     int i, file_size;
-    int seven_count = 0;
+    int three_count = 0;
     unsigned char value;
 
     /* Open file in binary mode for reading */
@@ -32,9 +32,9 @@ int main(void)
     for( i = 0; i< file_size; i++)
     {
        fread(&value, 1, 1, fd);
-       if( value == '7') seven_count++; 
+       if( value == '3') three_count++; 
     }
     fclose(fd);
-    printf("Number of '7' characters found in %s = %d\n", filename, seven_count);
+    printf("Number of '3' characters found in %s = %d\n", filename, three_count);
     exit(0);
 }
